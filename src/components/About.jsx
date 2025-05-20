@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 //Importe un objet styles contenant probablement des classes CSS personnalisées.
 import { styles } from '../styles'
 //Tilt est un composant qui donne un effet d'inclinaison 3D à un élément HTML lors du survol
-import { Tilt } from 'react-tilt'
+import Tilt from 'react-parallax-tilt';
 //Liste d'objets (tableau) avec les infos des services (titre, icône…), probablement
 import {services} from '../constants'
 //Importe les animations de la bibliothèque utils/motion
