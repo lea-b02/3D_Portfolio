@@ -19,8 +19,9 @@ const Stars = (props) => {
 
   // useState : pour gérer l'état de la position des étoiles
   // random.inSphere : génère des positions aléatoires dans une sphère de rayon 1.2
-  //Génère 5000 points aléatoires dans une sphère de rayon 1.2
-  const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
+  //Génère 5000 points aléatoires dans une sphère de rayon 1.2      15000/3
+  // const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
+  const [sphere] = useState(() =>random.inSphere(new Float32Array(15000), { radius: 1.2 }));
 
   //On fait tourner les étoiles autour des axes x et y lentement.
   //delta est le temps écoulé entre deux frames (pour une animation fluide).
