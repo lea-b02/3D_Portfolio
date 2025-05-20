@@ -19,7 +19,9 @@ const Ball = (props) => {
   //props.imgUrl est l'URL de l'image à appliquer.
   // useTexture charge l'image comme texture et retourne un tableau (on extrait le premier élément).
   // decal = une texture (image) chargée
+  
   const [decal] = useTexture([props.imgUrl])
+  
   return (
     /*Float ajoute un effet d'animation flottante.
 
