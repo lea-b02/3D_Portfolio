@@ -1,9 +1,15 @@
+import React, { Suspense } from 'react'
 //Framer Motion utilisée pour les animations React
 import { motion } from 'framer-motion'
 //cette ligne permet d'importer le fichier CSS plus les ecriture
 import { styles } from '../styles'
 //ComputersCanvas, qui affiche un modèle 3D
-import { ComputersCanvas } from './canvas'
+import { HeaderImageCanvas} from './canvas'
+import headerImg from '../../public/header-img.svg';
+
+
+
+
 //c'est la ou on va avoir le model en 3D celui qui et en haut de la page 
 const Hero = () => {
   return (
@@ -41,7 +47,9 @@ const Hero = () => {
 
       {/* Modèle 3D */}
       {/* <ComputersCanvas /> */}
-      <ComputersCanvas />
+      {/* <img src={headerImg} alt="Header Image" className="absolute top-[60%] right-20 transform -translate-y-1/2 w-[450px] h-auto"  /> */}
+      <HeaderImageCanvas/>
+
 
       {/* le petit buton pour bouget */}
       {/* div positionné en absolute dans la section.

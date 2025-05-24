@@ -51,7 +51,6 @@ const Computers = ({isMobile}) => {
 const ComputersCanvas = () => {
   //isMobile détermine si l'utilisateur est sur un écran petit (<500px).
   const [isMobile, setIsMobile] = useState(false);
-  const canvasRef = React.useRef();
   useEffect(() => {
     // window.matchMedia : permet de vérifier si l'écran est petit (<500px).
     const mediaQuery = window.matchMedia('(max-width: 500px)')
@@ -70,17 +69,6 @@ const ComputersCanvas = () => {
     }
   }, [])
 
-  // 🧼 Cleanup WebGL context on unmount
-  useEffect(() => {
-    return () => {
-      if (canvasRef.current?.gl) {
-        const gl = canvasRef.current.gl
-        gl.getContext().getExtension('WEBGL_lose_context')?.loseContext()
-        console.log('🧹 WebGL context cleaned from Canvas ref')
-      }
-    }
-  }, [])
-
   return (
     //Canvas et rendu du modèle
     //frameloop='demand' : le rendu est effectué uniquement lorsque la scène change.
@@ -89,7 +77,6 @@ const ComputersCanvas = () => {
     //gl={{ preserveDrawingBuffer: true }} : permet de conserver le dessin dans le tampon.
     //preserveDrawingBuffer : permet de conserver le dessin dans le tampon.
     <Canvas
-    ref={canvasRef} 
       frameloop='demand'
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
@@ -109,13 +96,8 @@ const ComputersCanvas = () => {
         {/*isMobile est une props pour ajuster l'affichage selon la taille d'écran.*/}
         <Computers isMobile = {isMobile} />
       </Suspense>
-      {/*CleanupGL est un composant qui nettoie le contexte WebGL pour éviter les fuites de mémoire.*/}
-      
-      
-
       {/*Preload charge les ressources à l'avance.*/}
       {/*all : charge toutes les ressources.*/}
-      
       <Preload all />
     </Canvas>
   )
