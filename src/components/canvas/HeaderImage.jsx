@@ -25,7 +25,7 @@ const HeaderImageCanvas = () => {
           absolute transform -translate-y-1/2
           ${loading ? 'hidden' : 'block'}
         `}
-        animate={{ x: [0, -65, 0] }}
+        animate={{ x: [0, -50, 0] }}
         transition={{
           duration: 3,
           repeat: Infinity,
