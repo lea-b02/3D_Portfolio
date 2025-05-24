@@ -148,17 +148,17 @@ import {
     //   name: "angular",
     //   icon: angular,
     // },
-    {
-      name: "assembly",
-      icon: assembly,
-    },
+    // {
+    //   name: "assembly",
+    //   icon: assembly,
+    // },
     {
       name: "kotlin",
       icon: kotlin,
     },
-    {name:"bash",
-      icon:bash,
-    },
+    // {name:"bash",
+    //   icon:bash,
+    // },
     
   ];
   
