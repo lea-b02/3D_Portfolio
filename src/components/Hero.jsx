@@ -57,8 +57,8 @@ const Hero = () => {
         bottom-32 : par défaut, positionne à 32 unités (≈ 128px) du bas.
         w-full : prend toute la largeur.
         flex justify-center items-center : centre le contenu horizontalement et verticalement (en hauteur du container). */}
-      
-      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
+      {/* 'absolute bottom-24 sm:bottom-16 md:bottom-10 w-full flex justify-center items-center' */}
+      <div className='absolute bottom-4 sm:bottom-6 md:bottom-10 w-full flex justify-center items-center'>
         {/* a : lien qui redirige vers la section "about" quand on clique dessus. */}
         {/* div : conteneur pour le bouton de défilement. */}
         {/* w-[35px] h-[64px] : largeur et hauteur du bouton. */}
