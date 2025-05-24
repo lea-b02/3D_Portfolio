@@ -8,6 +8,8 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 //Loader : affiche un indicateur de chargement pendant le chargement du modèle.
 import CanvasLoader from '../Loader'
+import { useThree } from '@react-three/fiber'
+
 
 // Composant qui charge le modèle GLTF
 //isMobile est une props pour ajuster l'affichage selon la taille d'écran.
@@ -43,6 +45,21 @@ const Computers = ({isMobile}) => {
     </mesh>
   )
 }
+
+// 1. Composant de nettoyage WebGL
+const CleanupGL = () => {
+  const { gl } = useThree()
+
+  useEffect(() => {
+    return () => {
+      gl.getContext().getExtension('WEBGL_lose_context')?.loseContext()
+      console.log("💡 WebGL context lost (cleaned up)")
+    }
+  }, [gl])
+
+  return null
+}
+
 
 // ComputersCanvas — c’est le conteneur principal
 const ComputersCanvas = () => {
@@ -93,8 +110,13 @@ const ComputersCanvas = () => {
         {/*isMobile est une props pour ajuster l'affichage selon la taille d'écran.*/}
         <Computers isMobile = {isMobile} />
       </Suspense>
+      {/*CleanupGL est un composant qui nettoie le contexte WebGL pour éviter les fuites de mémoire.*/}
+      <CleanupGL />
+      
+
       {/*Preload charge les ressources à l'avance.*/}
       {/*all : charge toutes les ressources.*/}
+      
       <Preload all />
     </Canvas>
   )
