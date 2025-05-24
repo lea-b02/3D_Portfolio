@@ -82,14 +82,14 @@ import {
   ];
   
   const technologies = [
-    {
-      name: "HTML 5",
-      icon: html,
-    },
-    {
-      name: "CSS 3",
-      icon: css,
-    },
+    // {
+    //   name: "HTML 5",
+    //   icon: html,
+    // },
+    // {
+    //   name: "CSS 3",
+    //   icon: css,
+    // },
     {
       name: "JavaScript",
       icon: javascript,
@@ -98,20 +98,20 @@ import {
       name: "TypeScript",
       icon: typescript,
     },
-    {
-      name: "React JS",
-      icon: reactjs,
-    },
+    // {
+    //   name: "React JS",
+    //   icon: reactjs,
+    // },
     
-    {
-      name: "Node JS",
-      icon: nodejs,
-    },
+    // {
+    //   name: "Node JS",
+    //   icon: nodejs,
+    // },
     
-    {
-      name: "Three JS",
-      icon: threejs,
-    },
+    // {
+    //   name: "Three JS",
+    //   icon: threejs,
+    // },
    
     
     
@@ -144,9 +144,20 @@ import {
     //   name: "kotlin",
     //   icon: kotlin,
     // },
+    // {
+    //   name: "angular",
+    //   icon: angular,
+    // },
     {
-      name: "angular",
-      icon: angular,
+      name: "assembly",
+      icon: assembly,
+    },
+    {
+      name: "kotlin",
+      icon: kotlin,
+    },
+    {name:"bash",
+      icon:bash,
     },
     
   ];

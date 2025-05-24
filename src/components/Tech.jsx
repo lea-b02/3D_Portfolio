@@ -4,38 +4,35 @@ import { BallCanvas } from "./canvas"
 import { technologies } from "../constants"
 // Un Higher Order Component (HOC) qui sert probablement à envelopper Tech pour lui ajouter du style ou des animations sectionnelles.
 import { SectionWrapper } from "../hoc"
-
+import {motion} from 'framer-motion'
+import { textVariant } from "../utils/motion"
+import { styles } from "../styles"
+import 'react-vertical-timeline-component/style.min.css' 
 // On définit un composant fonctionnel React nommé Tech. qui retourn quelque chose.
 const Tech = () => {
-  // Le composant Tech retourne un div contenant une liste de technologies.
-  // Il utilise la méthode map pour parcourir le tableau technologies et créer un BallCanvas pour chaque technologie.
   return (
-    // <div> : conteneur principal avec des classes Tailwind :
+    <div>
+      <motion.div variants={textVariant()}>
+        <h2 className={`${styles.sectionHeadText} text-left`}>
+          Skills.
+        </h2>
+        <p className={`${styles.sectionSubText} text-left`}>
+          Programming Languages:
+        </p>
+      </motion.div>
 
-    // flex : active Flexbox
-
-    // flex-row : aligne les enfants horizontalement
-
-    // flex-wrap : permet le retour à la ligne si nécessaire mettre les éléments sur plusieurs lignes
-
-    // justify-center : centre les éléments horizontalement
-
-    // gap-10 : espace de 2.5rem entre les éléments
-    <div className="flex flex-row flex-wrap justify-center gap-9">
-      {/* Pour chaque élément de technologies, on crée un composant enfant. */}
-      {technologies.map((technology) => (
-        // <div className="w-28 h-28"> : carré de 112px x 112px (28 * 4px)
-
-        // key={technology.name} : nécessaire pour que React suive les éléments dans la liste
-
-        // <BallCanvas icon={technology.icon} /> : affiche l’icône de la technologie à l’intérieur d’un canvas stylisé (effets 3D ou autre)
-        <div className="w-28 h-28" key={technology.name}>
-          <BallCanvas icon={technology.icon} />
-        </div>
-      ))}
+      <div className="flex flex-row flex-wrap justify-center gap-9">
+        {technologies.map((technology) => (
+          <div className="w-28 h-28" key={technology.name}>
+            <BallCanvas icon={technology.icon} />
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
+
+
 /*SectionWrapper :
 
 C’est une fonction (probablement un Higher Order Component).
