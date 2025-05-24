@@ -41,7 +41,7 @@ const Hero = () => {
 
       {/* Modèle 3D */}
       {/* <ComputersCanvas /> */}
-      {/* <ComputersCanvas /> */}
+      <ComputersCanvas />
 
       {/* le petit buton pour bouget */}
       {/* div positionné en absolute dans la section.
