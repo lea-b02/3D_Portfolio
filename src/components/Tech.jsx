@@ -1,7 +1,7 @@
 // Un composant probablement personnalisé qui affiche une icône dans un canvas (peut-être animé en 3D).
 import { BallCanvas } from "./canvas"
 // Une liste d’objets représentant différentes technologies (comme React, JavaScript, etc.), chaque objet contenant probablement un name et un icon.
-import { technologies ,frontendlogo ,utilisers } from "../constants"
+import { technologies ,frontendlogo ,utilisers  , databaselogo , backendlogo} from "../constants"
 // Un Higher Order Component (HOC) qui sert probablement à envelopper Tech pour lui ajouter du style ou des animations sectionnelles.
 import { SectionWrapper } from "../hoc"
 import {motion} from 'framer-motion'
@@ -32,7 +32,7 @@ const Tech = () => {
       </div>
 
         <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-left mt-3`}>
+        <p className={`${styles.sectionSubText} text-left mt-4`}>
           Frontend:
         </p>
       </motion.div>
@@ -46,7 +46,7 @@ const Tech = () => {
       </div>
 
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-left mt-3`}>
+        <p className={`${styles.sectionSubText} text-left mt-4`}>
           Technologies:
         </p>
       </motion.div>
@@ -55,6 +55,34 @@ const Tech = () => {
           {utilisers.map((utiliser) => (
           <div key={utiliser.id} className="w-28 h-28">
             <SkillItem icon={utiliser.icon} name={utiliser.name} />
+          </div>
+        ))}
+      </div>
+
+      <motion.div variants={textVariant()}>
+        <p className={`${styles.sectionSubText} text-left mt-4`}>
+          DataBases:
+        </p>
+      </motion.div>
+
+      <div className="flex flex-row flex-wrap justify-center gap-9 mt-3"> 
+        {databaselogo.map((databases) => (
+          <div className="w-28 h-28" key={databases.name}>
+              <BallCanvas icon={databases.icon} /> 
+          </div>
+        ))}
+      </div>
+
+      <motion.div variants={textVariant()}>
+        <p className={`${styles.sectionSubText} text-left mt-4`}>
+          Backend:
+        </p>
+      </motion.div>
+
+      <div className="flex flex-row flex-wrap justify-center gap-9 mt-3"> 
+        {backendlogo.map((backends) => (
+          <div className="w-28 h-28" key={backends.name}>
+              <BallCanvas icon={backends.icon} /> 
           </div>
         ))}
       </div>

@@ -14,6 +14,9 @@ import {
   canva,
   TailwindCSS,
   ReactNative,
+  dotnet,
+  sqlite,
+  mysql,
 } from "../assets";
 import {
     profilgit,
@@ -140,7 +143,35 @@ import {
     },
 
   ];
-  
+  const databaselogo = [
+    {
+      name: "SQL",
+      icon: sql,
+    },
+    {
+      name: "MySQL",
+      icon: mysql,
+    },
+    {
+      name: "SQLite",
+      icon: sqlite,
+    },
+  ];
+
+  const backendlogo = [
+    {
+      name: "Node JS",
+      icon: nodejs,
+    },
+    {
+      name: "Go",
+      icon: go,
+    },
+    {
+      name: "Dotnet",
+      icon: dotnet,
+    },
+  ];
   const technologies = [
     
     {
@@ -160,10 +191,6 @@ import {
     //   icon: nodejs,
     // },
     
-    // {
-    //   name: "Three JS",
-    //   icon: threejs,
-    // },
     
     {
       id:3,
@@ -354,4 +381,4 @@ import {
   //   },
    ];
   
-  export { services, technologies, experiences, testimonials, projects , frontendlogo ,utilisers };
+  export { services, technologies, experiences, testimonials, projects , frontendlogo ,utilisers , backendlogo, databaselogo };

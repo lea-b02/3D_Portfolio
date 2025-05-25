@@ -39,6 +39,9 @@ import TailwindCSS from "./tech/TailwindCSS.png";
 import ReactNative from "./tech/ReactNative.png";
 import aws from "./tech/aws.png";
 import canva from "./tech/canva.png";
+import mysql from "./tech/mysql.png";
+import sqlite from "./tech/sqlite.png";
+import dotnet from "./tech/dotnet.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -56,6 +59,9 @@ import tripguide from "./tripguide.png";
 import profilgit from "./profilgit.png";
 
 export {
+  dotnet,
+  sqlite,
+  mysql,
   TailwindCSS,
   ReactNative,
   aws,

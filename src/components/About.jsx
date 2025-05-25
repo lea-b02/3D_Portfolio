@@ -82,7 +82,7 @@ const About = () => {
 
       {/* C’est une version animée du composant HTML <p> (paragraphe). */}
       <motion.p
-        variants={fadeIn('', '', 0.1, 1)}
+        variants={fadeIn('', '', 0.2, 0.5)}
         // mt = margin-top Cela ajoute un espacement vertical au-dessus du paragraphe 
         // text-secondary = couleur secondaire du texte
         // text-[17px] = Taille de texte personnalisée (valeur précise) = 17 pixels.
