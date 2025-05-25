@@ -35,6 +35,10 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.png";
+import TailwindCSS from "./tech/TailwindCSS.png";
+import ReactNative from "./tech/ReactNative.png";
+import aws from "./tech/aws.png";
+import canva from "./tech/canva.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -52,6 +56,10 @@ import tripguide from "./tripguide.png";
 import profilgit from "./profilgit.png";
 
 export {
+  TailwindCSS,
+  ReactNative,
+  aws,
+  canva,
   profilgit,
   database,
   fullstack,

@@ -1,7 +1,7 @@
 // Un composant probablement personnalisé qui affiche une icône dans un canvas (peut-être animé en 3D).
 import { BallCanvas } from "./canvas"
 // Une liste d’objets représentant différentes technologies (comme React, JavaScript, etc.), chaque objet contenant probablement un name et un icon.
-import { technologies } from "../constants"
+import { technologies ,frontendlogo ,utilisers } from "../constants"
 // Un Higher Order Component (HOC) qui sert probablement à envelopper Tech pour lui ajouter du style ou des animations sectionnelles.
 import { SectionWrapper } from "../hoc"
 import {motion} from 'framer-motion'
@@ -31,6 +31,33 @@ const Tech = () => {
         ))}
       </div>
 
+        <motion.div variants={textVariant()}>
+        <p className={`${styles.sectionSubText} text-left mt-3`}>
+          Frontend:
+        </p>
+      </motion.div>
+
+      <div className="flex flex-row flex-wrap justify-center gap-9 mt-3"> 
+          {frontendlogo.map((frontend) => (
+          <div key={frontend.id} className="w-28 h-28">
+            <SkillItem icon={frontend.icon} name={frontend.name} />
+          </div>
+        ))}
+      </div>
+
+      <motion.div variants={textVariant()}>
+        <p className={`${styles.sectionSubText} text-left mt-3`}>
+          Technologies:
+        </p>
+      </motion.div>
+
+      <div className="flex flex-row flex-wrap justify-center gap-9 mt-3"> 
+          {utilisers.map((utiliser) => (
+          <div key={utiliser.id} className="w-28 h-28">
+            <SkillItem icon={utiliser.icon} name={utiliser.name} />
+          </div>
+        ))}
+      </div>
 
       {/* <div className="flex flex-row flex-wrap justify-center gap-9"> 
         {technologies.map((technology) => (

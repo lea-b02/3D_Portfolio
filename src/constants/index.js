@@ -10,6 +10,10 @@ import {
   sql,
   bash,
   kotlin,
+  aws,
+  canva,
+  TailwindCSS,
+  ReactNative,
 } from "../assets";
 import {
     profilgit,
@@ -80,16 +84,65 @@ import {
       icon: gameicon,
     },
   ];
+
+  const utilisers = [
+    {
+      id:1,
+      name: "Canva",
+      icon: canva,
+    },
+    {
+      id:2,
+      name: "Unity",
+      icon: unity,
+    },
+    {
+      id:3,
+      name: "AWS",
+      icon: aws,
+    },
+    {
+      id:4,
+      name: "Three.js",
+      icon: threejs,
+    },
+  ];
+  const frontendlogo = [
+    {
+      id:1,
+      name: "HTML 5",
+      icon: html,
+    },
+    {
+      id:2,
+      name: "CSS 3",
+      icon: css,
+    },
+    // {
+    //   id:3,
+    //   name: "React JS",
+    //   icon: reactjs,
+    // },
+    {
+      id:3,
+      name: "Angular",
+      icon: angular,
+    },
+    {
+      id:4,
+      name: "React",
+      icon: ReactNative,
+    },
+    {
+      id:5,
+      name: "Tailwind CSS",
+      icon: TailwindCSS,
+    },
+
+  ];
   
   const technologies = [
-    // {
-    //   name: "HTML 5",
-    //   icon: html,
-    // },
-    // {
-    //   name: "CSS 3",
-    //   icon: css,
-    // },
+    
     {
       id:1,
       name: "JavaScript",
@@ -100,10 +153,7 @@ import {
       name: "TypeScript",
       icon: typescript,
     },
-    // {
-    //   name: "React JS",
-    //   icon: reactjs,
-    // },
+    
     
     // {
     //   name: "Node JS",
@@ -117,23 +167,23 @@ import {
     
     {
       id:3,
-      name: "java",
+      name: "Java",
       icon: java,
     },
     {
       id:4,
-      name: "c",
+      name: "C",
       icon: c,
     },
     {
       id:5,
-      name: "cshap",
+      name: "Cshap",
       icon: cshap,
     },
     
     {
       id:6,
-      name: "python",
+      name: "Python",
       icon: python,
     },
     // {
@@ -141,30 +191,21 @@ import {
     //   icon: go,
     // },
     // {
-    //   name: "kotlin",
-    //   icon: kotlin,
-    // },
-    // {
-    //   name: "angular",
-    //   icon: angular,
-    // },
-    // {
-    //   name: "assembly",
-    //   icon: assembly,
-    // },
+   
+    
     {
       id:7,
-      name: "kotlin",
+      name: "Kotlin",
       icon: kotlin,
     },
     {
       id:8,
-      name:"bash",
+      name:"Bash",
       icon:bash,
     },
      {
       id:9,
-      name: "assembly",
+      name: "Assembly",
       icon: assembly,
     },
     
@@ -313,4 +354,4 @@ import {
   //   },
    ];
   
-  export { services, technologies, experiences, testimonials, projects };
+  export { services, technologies, experiences, testimonials, projects , frontendlogo ,utilisers };
