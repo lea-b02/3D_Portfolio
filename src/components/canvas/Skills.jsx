@@ -1,5 +1,6 @@
 import React from 'react';
 
+// ce si remplace les boules par des images
 const SkillItem = ({ icon, name }) => {
   return (
     <div className="flex justify-center items-center flex-col cursor-pointer">

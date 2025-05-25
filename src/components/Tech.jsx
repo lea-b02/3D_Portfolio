@@ -8,7 +8,7 @@ import {motion} from 'framer-motion'
 import { textVariant } from "../utils/motion"
 import { styles } from "../styles"
 import 'react-vertical-timeline-component/style.min.css' 
-import SkillItem from "./canvas/skills"
+import { SkillItem } from "./canvas"
 
 // On définit un composant fonctionnel React nommé Tech. qui retourn quelque chose.
 const Tech = () => {
