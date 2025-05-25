@@ -70,7 +70,7 @@ const ServiceCard = ({index,title,icon}) => {
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant(0.2)}>
         {/* aligné à gauche  */}
         <p className={`${styles.sectionSubText} text-left`}>
           Introduction
