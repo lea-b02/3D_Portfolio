@@ -8,6 +8,8 @@ import {motion} from 'framer-motion'
 import { textVariant } from "../utils/motion"
 import { styles } from "../styles"
 import 'react-vertical-timeline-component/style.min.css' 
+import SkillItem from "./canvas/skills"
+
 // On définit un composant fonctionnel React nommé Tech. qui retourn quelque chose.
 const Tech = () => {
   return (
@@ -21,13 +23,22 @@ const Tech = () => {
         </p>
       </motion.div>
 
-      <div className="flex flex-row flex-wrap justify-center gap-9">
-        {technologies.map((technology) => (
-          <div className="w-28 h-28" key={technology.name}>
-            {/* <BallCanvas icon={technology.icon} /> */}
+        <div className="flex flex-row flex-wrap justify-center gap-9 mt-3"> 
+          {technologies.map((technology) => (
+          <div key={technology.id} className="w-28 h-28">
+            <SkillItem icon={technology.icon} name={technology.name} />
           </div>
         ))}
       </div>
+
+
+      {/* <div className="flex flex-row flex-wrap justify-center gap-9"> 
+        {technologies.map((technology) => (
+          <div className="w-28 h-28" key={technology.name}>
+            {/* <BallCanvas icon={technology.icon} /> 
+          </div>
+        ))}
+      </div>*/}
     </div>
   )
 }

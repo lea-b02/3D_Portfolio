@@ -91,10 +91,12 @@ import {
     //   icon: css,
     // },
     {
+      id:1,
       name: "JavaScript",
       icon: javascript,
     },
     {
+      id:2,
       name: "TypeScript",
       icon: typescript,
     },
@@ -112,27 +114,25 @@ import {
     //   name: "Three JS",
     //   icon: threejs,
     // },
-   
-    
     
     {
+      id:3,
       name: "java",
       icon: java,
     },
     {
+      id:4,
       name: "c",
       icon: c,
     },
     {
+      id:5,
       name: "cshap",
       icon: cshap,
     },
     
-    // {
-    //   name: "assembly",
-    //   icon: assembly,
-    // },
     {
+      id:6,
       name: "python",
       icon: python,
     },
@@ -153,12 +153,20 @@ import {
     //   icon: assembly,
     // },
     {
+      id:7,
       name: "kotlin",
       icon: kotlin,
     },
-    // {name:"bash",
-    //   icon:bash,
-    // },
+    {
+      id:8,
+      name:"bash",
+      icon:bash,
+    },
+     {
+      id:9,
+      name: "assembly",
+      icon: assembly,
+    },
     
   ];
   
