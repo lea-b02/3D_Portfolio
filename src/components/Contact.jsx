@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { fadeIn } from "../utils/motion"
 
 // const Contact = () => {
 //   return (
@@ -74,7 +75,7 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-3 overflow-hidden`}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
@@ -86,9 +87,23 @@ const Contact = () => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          className='mt-3 flex flex-col gap-8'
         >
-          <label className='flex flex-col'>
+          <motion.p
+          variants={fadeIn('', '', 0.1, 1)}          
+          className="text-secondary text-[17px] max-w-3xl leading-[30px] text-left">
+If the content you viewed has caught your attention, please contact me by email at{" "}
+  <a
+    href="mailto:bitonelea@gmail.com"
+    className="text-secondary hover:text-blue-400 underline transition-colors duration-200"
+  >
+    bitonelea@gmail.com
+  </a>. I remain at your disposal for any additional information or professional discussion.
+  <br /><br />
+  Sincerely,<br />
+  Leah Bitone.
+</motion.p>
+          {/* <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Name</span>
             <input
               type='text'
@@ -98,7 +113,7 @@ const Contact = () => {
               placeholder="What's your good name?"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
-          </label>
+          </label> 
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your email</span>
             <input
@@ -127,7 +142,7 @@ const Contact = () => {
             className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
           >
             {loading ? "Sending..." : "Send"}
-          </button>
+          </button>*/}
         </form>
       </motion.div>
 
