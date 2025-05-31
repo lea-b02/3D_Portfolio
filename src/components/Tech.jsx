@@ -15,6 +15,7 @@ const Tech = () => {
   return (
     <div>
       <motion.div variants={textVariant()}>
+        {/* aligné à gauche  */}
         <h2 className={`${styles.sectionHeadText} text-left`}>
           Skills.
         </h2>
@@ -22,8 +23,13 @@ const Tech = () => {
           Programming Languages:
         </p>
       </motion.div>
-
+    {/* flex : active Flexbox
+    flex-row : aligne les enfants horizontalement
+    flex-wrap : permet le retour à la ligne si nécessaire mettre les éléments sur plusieurs lignes
+    justify-center : centre les éléments horizontalement
+    gap-10 : espace de 2.5rem entre les éléments */}
         <div className="flex flex-row flex-wrap justify-center gap-9 mt-3"> 
+          {/* Pour chaque élément de technologies, on crée un composant enfant. */}
           {technologies.map((technology) => (
           <div key={technology.id} className="w-28 h-28">
             <SkillItem icon={technology.icon} name={technology.name} />
@@ -81,6 +87,9 @@ const Tech = () => {
 
       <div className="flex flex-row flex-wrap justify-center gap-9 mt-3"> 
         {backendlogo.map((backends) => (
+        // <div className="w-28 h-28"> : carré de 112px x 112px (28 * 4px)
+        // key={technology.name} : nécessaire pour que React suive les éléments dans la liste
+        // <BallCanvas icon={technology.icon} /> : affiche l’icône de la technologie à l’intérieur d’un canvas stylisé (effets 3D ou autre)
           <div className="w-28 h-28" key={backends.name}>
               <BallCanvas icon={backends.icon} /> 
           </div>

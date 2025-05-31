@@ -74,14 +74,14 @@ const Contact = () => {
   };
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-3 overflow-hidden`}
-    >
+      <div className={`xl:mt-12 flex xl:flex-row flex-col gap-3 overflow-hidden items-start`}>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        // className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className='w-full xl:max-w-[500px] bg-black-100 p-8 rounded-2xl'
+
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
+        {/* <p className={styles.sectionSubText}>Get in touch</p> */}
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
         <form
@@ -92,13 +92,15 @@ const Contact = () => {
           <motion.p
           variants={fadeIn('', '', 0.1, 1)}          
           className="text-secondary text-[17px] max-w-3xl leading-[30px] text-left">
-If the content you viewed has caught your attention, please contact me by email at{" "}
+            If this content has captured your interest, you're welcome to reach out to me at{" "}  
+          {/* If the content you viewed has caught your attention, please contact me by email at{" "} */}
   <a
     href="mailto:bitonelea@gmail.com"
     className="text-secondary hover:text-blue-400 underline transition-colors duration-200"
   >
     bitonelea@gmail.com
-  </a>. I remain at your disposal for any additional information or professional discussion.
+  </a>. For more information or to explore potential collaboration.
+  {/* . I remain at your disposal for any additional information or professional discussion. */}
   <br /><br />
   Sincerely,<br />
   Leah Bitone.
@@ -146,10 +148,14 @@ If the content you viewed has caught your attention, please contact me by email 
         </form>
       </motion.div>
 
-      <motion.div
+      {/* <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
-      >
+      > */}
+        <motion.div
+  variants={slideIn("right", "tween", 0.2, 1)}
+  className='w-full xl:w-[500px] h-[350px] md:h-[450px] xl:h-[400px]'
+>
         <EarthCanvas />
       </motion.div>
     </div>
